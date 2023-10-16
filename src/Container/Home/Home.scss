@@ -1,0 +1,32 @@
+.home {
+  background-image: url(https://www.letsgolearn.com/wp-content/uploads/2023/02/KidsinComputerLab_30851787sm.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center; /* Center the background image */
+  min-height: 100vh; /* Set minimum height to 100% of viewport height */
+  min-width: 100vw; /* Set minimum width to 100% of viewport width */
+  opacity: 0.6;
+  overflow: hidden; /* Hiding both x and y overflow */
+}
+
+
+  @media screen and (max-width: 480px) {
+    .home {
+      background-image: url(https://www.letsgolearn.com/wp-content/uploads/2023/02/KidsinComputerLab_30851787sm.jpg);
+      background-attachment: fixed;
+      background-size: contain cover;
+      background-position: left -270px center ; /* Center the background image */
+      min-height: 100vh; /* Set minimum height to 100% of viewport height */
+      min-width: 100vw; /* Set minimum width to 100% of viewport width */
+      background-repeat: no-repeat;
+    
+
+      opacity: 0.6;
+      overflow: hidden; /* Hiding both x and y overflow */
+    }
+  }
+
+
+
+
+
