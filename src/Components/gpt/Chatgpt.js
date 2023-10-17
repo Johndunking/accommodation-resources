@@ -35,7 +35,7 @@ const Chatgpt = () => {
       }
     }
     try {
-      const response = await fetch('http://192.168.1.254:8000/completions',options)
+      const response = await fetch('http://accommodation-resources:8000/completions',options)
       const data = await response.json()
       setMessage(data.choices[0].message)
       console.log("Response data:", data);
