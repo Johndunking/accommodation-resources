@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/accommodation-resources/static/css/main.bcfa2017.css",
+    "main.js": "/accommodation-resources/static/js/main.980e26cd.js",
+    "static/media/logo-2.png": "/accommodation-resources/static/media/logo-2.598d90b00ff8314dceae.png",
+    "static/media/science.png": "/accommodation-resources/static/media/science.8575c19489f45a7ac813.png",
+    "static/media/Math.png": "/accommodation-resources/static/media/Math.874f578f9270607056d9.png",
+    "static/media/writing.png": "/accommodation-resources/static/media/writing.aeeadc5186aab25be63e.png",
+    "static/media/sel.png": "/accommodation-resources/static/media/sel.e1823bb1f68665f4d3b4.png",
+    "static/media/Teacher.png": "/accommodation-resources/static/media/Teacher.67c8d70c16e9b779cf20.png",
+    "static/media/logo-3.png": "/accommodation-resources/static/media/logo-3.a9a1f87d440b7520e14f.png",
+    "static/media/logo.png": "/accommodation-resources/static/media/logo.db9c083c093f2dd8607d.png",
+    "index.html": "/accommodation-resources/index.html",
+    "main.bcfa2017.css.map": "/accommodation-resources/static/css/main.bcfa2017.css.map",
+    "main.980e26cd.js.map": "/accommodation-resources/static/js/main.980e26cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bcfa2017.css",
+    "static/js/main.980e26cd.js"
+  ]
+}
