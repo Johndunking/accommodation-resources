@@ -1,7 +1,9 @@
-const PORT = 8000
+const https = require('https')
 const express = require('express')
 const cors = require('cors')
 const app = express()
+const fs = require('fs')
+const path = require('path')
 app.use(express.json())
 app.use(cors())
 
@@ -34,5 +36,12 @@ app.post('/completions', async (req, res) => {
 
 })
 
-app.listen(PORT, () => console.log('Your server is running on PORT ' + PORT))
+const sslServer = https.createServer({
+    key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
+    cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem'))
+}, app)
+
+sslServer.listen(3443, () => console.log('Secure server on port 3443'))
+
+
 

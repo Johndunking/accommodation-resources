@@ -23,15 +23,15 @@ const Sidebar = () => {
             
             <Nav.Link href="#link"><NavLink to="teacher" style={{textDecoration:"none", color:'white'}}>Teacher</NavLink></Nav.Link>
             <NavDropdown title="Subjects" id="basic-nav-dropdown" >
-              <NavDropdown.Item href="#action/3.1"><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item ><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
+              <NavDropdown.Item >
               <NavLink to="writing" style={{textDecoration:"none", color:'white'}}>Writing</NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3"><NavLink to="math" style={{textDecoration:"none", color:'white'}}>Math</NavLink></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4"><NavLink to="science" style={{textDecoration:"none", color:'white'}}>Science</NavLink></NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5"><NavLink to="sel" style={{textDecoration:"none", color:'white'}}>SEL</NavLink></NavDropdown.Item>
+              <NavDropdown.Item><NavLink to="math" style={{textDecoration:"none", color:'white'}}>Math</NavLink></NavDropdown.Item>
+              <NavDropdown.Item><NavLink to="science" style={{textDecoration:"none", color:'white'}}>Science</NavLink></NavDropdown.Item>
+              <NavDropdown.Item><NavLink to="sel" style={{textDecoration:"none", color:'white'}}>SEL</NavLink></NavDropdown.Item>
               <NavDropdown.Divider /> 
-              <NavDropdown.Item href="#action/3.6">
+              <NavDropdown.Item >
               <NavLink to ="https://social-dojo.netlify.app" target='_blank' style={{textDecoration:"none", color:'white'}}>Community</NavLink>
               </NavDropdown.Item>
             </NavDropdown>

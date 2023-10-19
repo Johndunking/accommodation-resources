@@ -34,7 +34,7 @@ const SEL = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
-      <Card.Img variant="top" src="https://www.dasint.org.sg/images/blog/Dyslexia_and_SpLDs/SEL1.png" />
+      <Card.Img variant="top" src="https://www.dasint.org.sg/images/blog/Dyslexia_and_SpLDs/SEL1.png"/>
       <Card.Body>
         <Card.Title>SEL Anchor Chart</Card.Title>
         <Card.Text>
