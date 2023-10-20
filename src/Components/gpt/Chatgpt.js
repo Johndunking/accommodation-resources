@@ -6,7 +6,7 @@ import './gpt.css'
 
 const Chatgpt = () => {
   const [ value, setValue] = useState("")
-  const  [message, setMessage] = useState("")
+  const  [message, setMessage] = useState(null)
   const [previousChats, setPreviousChats] = useState([])
   const [currentTitle, setCurrentTitle] = useState([])
 
