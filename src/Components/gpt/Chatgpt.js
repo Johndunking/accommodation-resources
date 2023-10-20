@@ -35,10 +35,10 @@ const Chatgpt = () => {
       }
     }
     const serverURL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8000';
-    
+
     try {
       const response = await fetch(`${serverURL}/completions`,options)
-      const data = await response.json()
+      const data = await response.text()
       console.log("API Response:", data);
       setMessage(data.choices[0].message);
       setValue("")
