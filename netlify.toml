@@ -1,0 +1,7 @@
+[build]
+command = "npm run build"
+functions = "functions"
+publish = "public"
+
+[build.environment]
+OPENAI_API_KEY = "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"

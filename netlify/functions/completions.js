@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const API_KEY = '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';
+const API_KEY = process.env.OPENAI_API_KEY;
 
 const handler = async (event) => {
   const body = JSON.parse(event.body);
