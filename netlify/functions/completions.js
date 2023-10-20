@@ -7,7 +7,7 @@ app.use(cors());
 
 const API_KEY = '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';
 
-const handler = async ('/completions', async (req, res) => {
+exports.handler = async ('/completions', async (req, res) => {
   const body = JSON.parse(event.body);
 
   const options = {
