@@ -15,6 +15,7 @@
     "fs": "^0.0.1-security",
     "gsap": "file:gsap-bonus.tgz",
     "gsap-drawsvg": "^1.0.0",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
     "proxy": "^2.1.1",
