@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(cors())
 
 
-const API_KEY= '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'
+const API_KEY= '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'
 
 app.post('/completions', async (req, res) => {
     const options = {
@@ -18,7 +18,8 @@ app.post('/completions', async (req, res) => {
         body: JSON.stringify({
             model : "gpt-3.5-turbo",
             messages: [{ role: "user", content: req.body.message},],
-            max_tokens: 700,
+            max_tokens: 700
+            
         })
     }
     try {

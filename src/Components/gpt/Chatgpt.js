@@ -35,7 +35,7 @@ const Chatgpt = () => {
       }
     }
     try {
-      const response = await fetch('https://accommodation-resources.com/.netlify/functions/completions',options)
+      const response = await fetch('http://localhost:8000/completions',options)
       const data = await response.json()
       console.log("API Response:", data);
       setMessage(data.choices[0].message);
