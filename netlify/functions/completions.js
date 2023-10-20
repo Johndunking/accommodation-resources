@@ -7,8 +7,8 @@ app.use(cors());
 
 const API_KEY = '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';
 
-exports.handler = async ('/completions', async (req, res) => {
-  const body = JSON.parse(event.body);
+const handler = async ('/completions', async (req, res) => {
+  const body = JSON.parse(req.body);
 
   const options = {
     method: "POST",
@@ -26,6 +26,7 @@ exports.handler = async ('/completions', async (req, res) => {
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', options);
     const data = await response.json();
+    res.send(data)
     return {
       statusCode: 200,
       body: JSON.stringify(data)
