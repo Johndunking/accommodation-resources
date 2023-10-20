@@ -34,7 +34,7 @@
     "deploy": "gh-pages -d build",
     "start:frontend": "react-scripts start",
     "start:backend": "nodemon server.js",
-    "build": "CI= npm run build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
