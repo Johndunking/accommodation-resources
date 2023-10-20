@@ -39,7 +39,6 @@ const Chatgpt = () => {
       const data = await response.json()
       console.log("API Response:", data);
       setMessage(data.choices[0].message);
-      console.log("Response data:", data);
       setValue("")
       
 
