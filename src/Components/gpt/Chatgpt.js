@@ -6,7 +6,7 @@ import './gpt.css'
 
 const Chatgpt = () => {
   const [ value, setValue] = useState("")
-  const  [message, setMessage] = useState(null)
+  const  [message, setMessage] = useState("")
   const [previousChats, setPreviousChats] = useState([])
   const [currentTitle, setCurrentTitle] = useState([])
 
@@ -35,9 +35,10 @@ const Chatgpt = () => {
       }
     }
     try {
-      const response = await fetch('https://accommodation-resources.netlify.app',options)
+      const response = await fetch('https://accommodation-resources:8000/completions',options)
       const data = await response.json()
-      setMessage(data.choices[0].message)
+      console.log("API Response:", data);
+      setMessage(data.choices[0].message);
       console.log("Response data:", data);
       setValue("")
       
@@ -48,6 +49,8 @@ const Chatgpt = () => {
       console.error(error)
     }
   }
+
+  console.log(message)
 
   
 
@@ -76,7 +79,7 @@ const Chatgpt = () => {
     }
     
 
-  }, [message, currentTitle,  ])
+  }, [message, currentTitle])
 
   const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
   const uniqueTitle = Array.from(new Set(previousChats.map(previousChats => previousChats.title)))

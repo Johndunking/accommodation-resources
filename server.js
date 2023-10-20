@@ -1,4 +1,4 @@
-const port = 8000
+const PORT = 8000
 const express = require('express')
 const cors = require('cors')
 const app = express()
@@ -17,10 +17,8 @@ app.post('/completions', async (req, res) => {
         },
         body: JSON.stringify({
             model : "gpt-3.5-turbo",
-            messages: [{ role: "user", content: req.body.message}, ],
-            
+            messages: [{ role: "user", content: req.body.message},],
             max_tokens: 700,
-            
         })
     }
     try {
@@ -36,7 +34,7 @@ app.post('/completions', async (req, res) => {
 
 
 
-app.listen(PORT => 'your server is running on PORT' + PORT )
+app.listen(PORT, () => console.log('Your server is running on PORT ' + PORT))
 
 
 

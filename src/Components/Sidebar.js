@@ -23,16 +23,16 @@ const Sidebar = () => {
             
             <Nav.Link href="#link"><NavLink to="teacher" style={{textDecoration:"none", color:'white'}}>Teacher</NavLink></Nav.Link>
             <NavDropdown title="Subjects" id="basic-nav-dropdown" >
-              <NavDropdown.Item ><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
-              <NavDropdown.Item >
+              <NavDropdown.Item href="#reading"><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
+              <NavDropdown.Item href="#writing">
               <NavLink to="writing" style={{textDecoration:"none", color:'white'}}>Writing</NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item><NavLink to="math" style={{textDecoration:"none", color:'white'}}>Math</NavLink></NavDropdown.Item>
-              <NavDropdown.Item><NavLink to="science" style={{textDecoration:"none", color:'white'}}>Science</NavLink></NavDropdown.Item>
-              <NavDropdown.Item><NavLink to="sel" style={{textDecoration:"none", color:'white'}}>SEL</NavLink></NavDropdown.Item>
+              <NavDropdown.Item href="#math"><NavLink to="math" style={{textDecoration:"none", color:'white'}}>Math</NavLink></NavDropdown.Item>
+              <NavDropdown.Item href="#science"><NavLink to="science" style={{textDecoration:"none", color:'white'}}>Science</NavLink></NavDropdown.Item>
+              <NavDropdown.Item href="#sel"><NavLink to="sel" style={{textDecoration:"none", color:'white'}}>SEL</NavLink></NavDropdown.Item>
               <NavDropdown.Divider /> 
-              <NavDropdown.Item >
-              <NavLink to ="https://social-dojo.netlify.app" target='_blank' style={{textDecoration:"none", color:'white'}}>Community</NavLink>
+              <NavDropdown.Item href="https://social-dojo.netlify.app" target='_blank'>
+              <NavLink to ="https://social-dojo.netlify.app" target='_blank' style={{textDecoration:"none", color:'white'}}>Home</NavLink>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
