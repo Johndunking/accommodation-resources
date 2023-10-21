@@ -16,6 +16,7 @@
     "fs": "^0.0.1-security",
     "gsap": "file:gsap-bonus.tgz",
     "gsap-drawsvg": "^1.0.0",
+    "heroku": "^8.6.0",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
