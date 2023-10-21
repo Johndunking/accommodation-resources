@@ -3,16 +3,13 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 app.use(express.json())
-app.use(cors({
-    origin: 'https://accommodation-resources.com',
-    methods: 'GET,POST',
-  }));
+app.use(cors())
 require('dotenv').config();
 
 
 const API_KEY=process.env.OPENAI_API_KEY;
 
-app.get('/', (req, res) => {
+app.get('/completions', (req, res) => {
     res.send('Hello, this is your server!');
   });
 
