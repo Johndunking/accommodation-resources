@@ -24,11 +24,8 @@ const allowedOrigins = [
 
 const API_KEY=process.env.OPENAI_API_KEY;
 
-app.get('/completions', (req, res) => {
-    res.send('Hello, this is your server!');
-  });
 
-app.post('/completions', async (req, res) => {
+app.get('/completions', async (req, res) => {
     const options = {
         method: "POST",
         headers: {
