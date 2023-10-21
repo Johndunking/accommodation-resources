@@ -3,7 +3,10 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: 'https://accommodation-resources.com',
+    methods: 'GET,POST',
+  }));
 require('dotenv').config();
 
 
