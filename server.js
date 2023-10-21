@@ -2,8 +2,7 @@ const PORT = process.env.PORT || 8000
 const express = require('express')
 const cors = require('cors')
 const app = express()
-app.use(express.json())
-
+app.use(express.json()) 
 require('dotenv').config();
 
 const allowedOrigins = [
@@ -35,7 +34,7 @@ app.get('/completions', async (req, res) => {
         body: JSON.stringify({
             model : "gpt-3.5-turbo",
             messages: [{ role: "user", content: req.body.message},],
-            max_tokens: 700
+            max_tokens: 700,
             
         })
     }

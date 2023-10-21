@@ -21,7 +21,7 @@ const Sidebar = () => {
           
           <Nav>
             
-            <Nav.Link href="#link"><NavLink to="teacher" style={{textDecoration:"none", color:'white'}}>Teacher</NavLink></Nav.Link>
+            <Nav.Link href="#teacher"><NavLink to="teacher" style={{textDecoration:"none", color:'white'}}>Teacher</NavLink></Nav.Link>
             <NavDropdown title="Subjects" id="basic-nav-dropdown" >
               <NavDropdown.Item href="#reading"><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
               <NavDropdown.Item href="#writing">
@@ -32,7 +32,7 @@ const Sidebar = () => {
               <NavDropdown.Item href="#sel"><NavLink to="sel" style={{textDecoration:"none", color:'white'}}>SEL</NavLink></NavDropdown.Item>
               <NavDropdown.Divider /> 
               <NavDropdown.Item href="https://social-dojo.netlify.app" target='_blank'>
-              <NavLink to ="https://social-dojo.netlify.app" target='_blank' style={{textDecoration:"none", color:'white'}}>Home</NavLink>
+              <NavLink to ="https://social-dojo.netlify.app" target='_blank' style={{textDecoration:"none", color:'white'}}>Community</NavLink>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

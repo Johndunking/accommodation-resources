@@ -43,6 +43,16 @@ const Writing = () => {
         <Button variant="primary" href='https://superstarworksheets.com/wp-content/uploads/2023/09/GraphicOrganizer.jpg'>Main idea</Button>
       </Card.Body>
     </Card>
+    <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
+      <Card.Img variant="top" src="https://i.ytimg.com/vi_webp/EfaJ6n64A8g/maxresdefault.webp" />
+      <Card.Body>
+        <Card.Title>Minecraft Writing Prompt</Card.Title>
+        <Card.Text>
+          2nd grade writing prompt about minecraft.
+        </Card.Text>
+        <Button variant="primary" href='https://docs.google.com/document/d/1lt0RwcHWCGLR43SQyZH68TgkXh9kKQ9XdnSsxUDvt5I/edit?pli=1'>Main idea</Button>
+      </Card.Body>
+    </Card>
         </Row>
       </Container>
       </div>

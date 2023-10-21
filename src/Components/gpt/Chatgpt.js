@@ -34,7 +34,7 @@ const Chatgpt = () => {
         "Content-Type": "application/json"
       }
     }
-    const serverURL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8000';
+  
 
     try {
       const response = await fetch('https://accommodation-resources-da4d836e1db9.herokuapp.com/completions',options)
