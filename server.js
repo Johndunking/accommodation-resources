@@ -9,10 +9,6 @@ require('dotenv').config();
 
 const API_KEY=process.env.OPENAI_API_KEY;
 
-app.get('/', (req, res) => {
-    res.send('Hello, this is your server!');
-  });
-
 app.post('/completions', async (req, res) => {
     const options = {
         method: "POST",
