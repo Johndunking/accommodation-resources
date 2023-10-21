@@ -37,7 +37,7 @@ const Chatgpt = () => {
     const serverURL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:8000';
 
     try {
-      const response = await fetch(`'https://accommodation-resources-7aaa1a2f27ae.herokuapp.com/completions'`,options)
+      const response = await fetch('https://accommodation-resources-7aaa1a2f27ae.herokuapp.com/completions',options)
       const data = await response.json()
       console.log("API Response:", data);
       setMessage(data.choices[0].message);
