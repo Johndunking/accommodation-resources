@@ -3,9 +3,24 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 app.use(express.json())
-app.use(cors())
+
 require('dotenv').config();
 
+const allowedOrigins = [
+    'https://accommodation-resources.com', // Replace with your Netlify site URL
+  ];
+  
+  const corsOptions = {
+    origin: (origin, callback) => {
+      if (allowedOrigins.includes(origin) || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+  };
+  
+  app.use(cors(corsOptions));
 
 const API_KEY=process.env.OPENAI_API_KEY;
 
