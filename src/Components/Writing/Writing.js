@@ -32,7 +32,7 @@ const Writing = () => {
         <Button variant="primary" href="https://i.pinimg.com/736x/ea/29/10/ea29102719bc2aa016b7272cb685c2a5.jpg"
         target="_blank">I read, I thought</Button>
       </Card.Body>
-    </Card>
+    </Card> 
     <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
       <Card.Img variant="top" src="https://superstarworksheets.com/wp-content/uploads/2023/09/GraphicOrganizer.jpg" />
       <Card.Body>
