@@ -50,7 +50,7 @@ const Writing = () => {
         <Card.Text>
           2nd grade writing prompt about minecraft.
         </Card.Text>
-        <Button variant="primary" href='https://docs.google.com/document/d/1lt0RwcHWCGLR43SQyZH68TgkXh9kKQ9XdnSsxUDvt5I/edit?pli=1'>Main idea</Button>
+        <Button variant="primary" href='https://docs.google.com/document/d/1lt0RwcHWCGLR43SQyZH68TgkXh9kKQ9XdnSsxUDvt5I/edit?pli=1'>Minecraft Prompt</Button>
       </Card.Body>
     </Card>
         </Row>

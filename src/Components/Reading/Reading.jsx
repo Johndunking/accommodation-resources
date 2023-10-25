@@ -46,13 +46,13 @@ const Reading = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
-      <Card.Img variant="top" src="https://cms-tc.pbskids.org/parents/Authors/readingrockets.jpg" />
+      <Card.Img variant="top" src="https://online.anyflip.com/bmucq/zmjn/files/mobile/1.jpg?1627136506" />
       <Card.Body>
-        <Card.Title>Reading Rockets</Card.Title>
+        <Card.Title>Beginning Words List</Card.Title>
         <Card.Text>
-          Reading support
+          Beginning CVC words list.
         </Card.Text>
-        <Button variant="primary" href='https://www.readingrockets.org/reading-101/reading-and-writing-basics/phonics-and-decoding'>Reading rockets</Button>
+        <Button variant="primary" href='https://docs.google.com/document/d/1_VenDBqCN7LSuMlCmpTbb2H4JO6F6a00NqabWxZllog/edit#heading=h.or72e3czib4i'>Beginning Words List</Button>
       </Card.Body>
     </Card>
     
