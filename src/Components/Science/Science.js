@@ -40,7 +40,7 @@ const Science = () => {
         <Card.Text>
           Hypothesis Anchor Chart
         </Card.Text>
-        <Button variant="primary">Hypothesis</Button>
+        <Button variant="primary" href="https://www.datocms-assets.com/25800/1687325348-lateral-view-2.png">Hypothesis</Button>
       </Card.Body>
     </Card>
         </Row>
