@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div>
         <header>
       <Navbar bg="dark" data-bs-theme="dark" className='navbar-dark fixed-top'>
-      <Container className="container justify-content-left">
+      <Container className="container justify-content-left padding-0">
         <Navbar.Brand href="#home"><NavLink to="/" style={{textDecoration:"none", color:'white'}}><Link
         to="/"> <img src={logo} style={{height: "40px"}} alt='logo' className='logo' /></Link></NavLink></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
