@@ -1,13 +1,14 @@
 .reading{
     background-color: #202123;
-    background-attachment: fixed;
     background-size: cover;
     padding-top: 100px;
     
   }
   .cards {
+    display: flex;
     justify-content: center;
     padding: 20px;
+    padding-left: 70px;
   }
   h1 {
     font-family: 'Open Sans', sans-serif;
