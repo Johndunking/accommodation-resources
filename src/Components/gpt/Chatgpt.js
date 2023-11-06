@@ -108,7 +108,7 @@ const Chatgpt = () => {
           </nav>
         </section>
         <section className='main'>
-          {currentTitle && <h1 className='title'> <img src={Teacher} alt='Teacher' fluid className='center' style={{ width: '18rem'}}/></h1>}
+          {currentTitle && <h1 className='title'> <img src={Teacher} alt='Teacher' fluid className='center' style={{ width: '18rem', paddingTop: '100px'}}/></h1>}
           <ul className='feed'>
             {currentChat?.map((chatMessage, index) => <li key={index}>
               <p className='role'>{chatMessage.role}</p>

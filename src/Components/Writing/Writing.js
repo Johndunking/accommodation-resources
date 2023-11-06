@@ -13,7 +13,7 @@ const Writing = () => {
   return (
     <div className='writing'>
       <Container> 
-        <Row className='px-5 py-4'>
+        <Row>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
           <Image src={writinglogo} fluid className='center' style={{ width: '18rem',}}   />
           <h1>Writing <br/>Accommodations</h1>

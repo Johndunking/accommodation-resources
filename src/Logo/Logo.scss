@@ -35,21 +35,21 @@
 }
 
 .svg-container {
-    stroke:rgb(104, 35, 19);
+    stroke:white;
     stroke-width: 10;
 }
 
 @media screen and (max-width: 1200px) {
 
     .logo-container {
-        position: fixed;
+        position: relative;
         width: 200px;
         height: auto;
         top: 100px;
         right: 30px;
         box-sizing: border-box;
         margin: auto;
-        left: 100px;
+        left: auto;
       }
     
       .logo-container svg {

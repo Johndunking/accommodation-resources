@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.scss'
 import Logo from '../../Logo/Logo'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -8,12 +9,14 @@ import Logo from '../../Logo/Logo'
 const Home = () => {
   return (
     <>
-   
-   <div className='home'>
-   </div>
+   <section className='home container-fluid'>
+   <div>
    <div>
    <Logo />
    </div>
+   </div>
+   </section>
+   
   
   </>
    
