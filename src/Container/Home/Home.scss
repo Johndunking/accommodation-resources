@@ -4,20 +4,18 @@
   background-position: center; /* Center the background image */
   min-height: 100vh; /* Set minimum height to 100% of viewport height */
   min-width: 100vw; /* Set minimum width to 100% of viewport width */
-  opacity: 0.6  ;
   overflow: hidden; /* Hiding both x and y overflow */
 }
 
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1200px) {
     .home {
       background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=60&w=900&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWNhZGVtaWNzfGVufDB8fDB8fHww');
       background-size: cover;
-      background-position: left -270px center ; /* Center the background image */
+      background-position: center ; /* Center the background image */
       min-height: 100vh; /* Set minimum height to 100% of viewport height */
       min-width: 100vw; /* Set minimum width to 100% of viewport width */
       background-repeat: no-repeat;
-      opacity: 0.6;
       overflow: hidden; /* Hiding both x and y overflow */
     }
   }

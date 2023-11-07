@@ -13,9 +13,9 @@ const Writing = () => {
   return (
     <div className='writing'>
       <Container> 
-        <Row>
+        <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
-          <Image src={writinglogo} fluid className='center' style={{ width: '18rem',}}   />
+          <Image src={writinglogo} fluid className='center' style={{ width: '18rem',paddingLeft:'45px'}}   />
           <h1>Writing <br/>Accommodations</h1>
           </Col>
         </Row>

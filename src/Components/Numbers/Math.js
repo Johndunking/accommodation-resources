@@ -14,7 +14,7 @@ const Math = () => {
     <>
     <div className='math'>
     <Container> 
-        <Row>
+        <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
           <Image src={mathlogo} fluid className='center' style={{ width: '18rem',}}   />
           <h1>Math <br/>Accommodations</h1>

@@ -13,7 +13,7 @@ const Science = () => {
   return (
     <div className='science'>
       <Container> 
-        <Row>
+        <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
           <Image src={sciencelogo} fluid className='center' style={{ width: '18rem',}}   />
           <h1>Science <br/>Accommodations</h1>

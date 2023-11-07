@@ -13,7 +13,7 @@ const SEL = () => {
   return (
     <div className='sel'>
        <Container> 
-        <Row>
+        <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
           <Image src={sellogo} fluid className='center' style={{ width: '18rem',}}   />
           <h1>SEL <br/>Accommodations</h1>

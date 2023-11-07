@@ -13,16 +13,16 @@ const Sidebar = () => {
     <div>
         <header>
       <Navbar bg="dark" data-bs-theme="dark" className='navbar-dark fixed-top'>
-      <Container className="container justify-content-left">
+      <Container>
         <Navbar.Brand href="#home"><NavLink to="/" style={{textDecoration:"none", color:'white'}}><Link
         to="/"> <img src={logo} style={{height: "40px"}} alt='logo' className='logo' /></Link></NavLink></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse className='flex-grow-0' id="basic-navbar-nav" >
+        <Navbar.Collapse className='container-fluid' id="basic-navbar-nav" >
           
           <Nav>
             
             <Nav.Link href="#teacher"><NavLink to="teacher" style={{textDecoration:"none", color:'white'}}>Teacher</NavLink></Nav.Link>
-            <NavDropdown title="Subjects" id="basic-nav-dropdown" >
+            <NavDropdown title="Subjects" id="basic-nav-dropdown">
               <NavDropdown.Item href="#reading"><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
               <NavDropdown.Item href="#writing">
               <NavLink to="writing" style={{textDecoration:"none", color:'white'}}>Writing</NavLink>
