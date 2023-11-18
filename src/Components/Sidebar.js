@@ -18,9 +18,7 @@ const Sidebar = () => {
         to="/"> <img src={logo} style={{height: "40px"}} alt='logo' className='logo' /></Link></NavLink></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse className='container-fluid' id="basic-navbar-nav" >
-          
           <Nav>
-            
             <Nav.Link href="#teacher"><NavLink to="teacher" style={{textDecoration:"none", color:'white'}}>Teacher</NavLink></Nav.Link>
             <NavDropdown title="Subjects" id="basic-nav-dropdown">
               <NavDropdown.Item href="#reading"><NavLink to="reading" style={{textDecoration:"none", color:'white'}} >Reading</NavLink></NavDropdown.Item>
