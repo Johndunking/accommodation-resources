@@ -44,6 +44,16 @@ const Math = () => {
         <Button variant="primary" href='https://www.memozor.com/images/multiplication/printable_charts/zoom/multiplication_charts.jpg'>Multiplication Chart</Button>
       </Card.Body>
     </Card>
+    <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
+      <Card.Img variant="top" src="https://spreadsheetsolving.com/wp-content/uploads/2020/05/image-3.png" />
+      <Card.Body>
+        <Card.Title>Math worksheet generator</Card.Title>
+        <Card.Text>
+          Math worksheets
+        </Card.Text>
+        <Button variant="primary" href='https://mathworksheetsgenerator.netlify.app/'>Multiplication Chart</Button>
+      </Card.Body>
+    </Card>
         </Row>
       </Container>
     </div>
