@@ -62,9 +62,9 @@ const Math = () => {
       <Card.Body>
         <Card.Title>Math worksheet generator</Card.Title>
         <Card.Text>
-          Math worksheets
+          Addition, subtraction, multiplication and division math worksheet generator.
         </Card.Text>
-        <Button variant="primary" href='https://mathworksheetsgenerator.netlify.app/'>Multiplication Chart</Button>
+        <Button variant="primary" href='https://mathworksheetsgenerator.netlify.app/'>Math Worksheets</Button>
       </Card.Body>
     </Card>
         </Row>
