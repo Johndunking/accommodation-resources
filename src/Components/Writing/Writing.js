@@ -22,6 +22,19 @@ const Writing = () => {
         <Row className='cards'>
         <Card style={{ width: '18rem',backgroundColor: '#343541', color:'white' }}>
       <Card.Img variant="top" 
+      src="https://dataconomy.com/wp-content/uploads/2023/10/Magic-School-AI.jpg"
+       />
+      <Card.Body>
+        <Card.Title>Magic School AI</Card.Title>
+        <Card.Text>
+          Magic School AI generates content, accommodations, ideas and supports for teachers by utilizing chatgpt AI API interface.
+        </Card.Text>
+        <Button variant="primary" href="https://www.magicschool.ai/"
+        target="_blank">Magic School AI</Button>
+      </Card.Body>
+    </Card>
+        <Card style={{ width: '18rem',backgroundColor: '#343541', color:'white' }}>
+      <Card.Img variant="top" 
       src="https://i.pinimg.com/736x/ea/29/10/ea29102719bc2aa016b7272cb685c2a5.jpg"
        />
       <Card.Body>

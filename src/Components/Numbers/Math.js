@@ -23,6 +23,19 @@ const Math = () => {
         <Row className='cards'>
         <Card style={{ width: '18rem',backgroundColor: '#343541', color:'white' }}>
       <Card.Img variant="top" 
+      src="https://dataconomy.com/wp-content/uploads/2023/10/Magic-School-AI.jpg"
+       />
+      <Card.Body>
+        <Card.Title>Magic School AI</Card.Title>
+        <Card.Text>
+          Magic School AI generates content, accommodations, ideas and supports for teachers by utilizing chatgpt AI API interface.
+        </Card.Text>
+        <Button variant="primary" href="https://www.magicschool.ai/"
+        target="_blank">Magic School AI</Button>
+      </Card.Body>
+    </Card>
+        <Card style={{ width: '18rem',backgroundColor: '#343541', color:'white' }}>
+      <Card.Img variant="top" 
       src="https://suncatcherstudio.com/uploads/printables/math/hundreds-charts/pdf-png/hundreds-chart-printable-colored1-fefefe-44aa44.png"
        />
       <Card.Body>
@@ -45,7 +58,7 @@ const Math = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
-      <Card.Img variant="top" src="https://spreadsheetsolving.com/wp-content/uploads/2020/05/image-3.png" />
+      <Card.Img variant="top" src="https://mathworksheetsgenerator.netlify.app/static/media/logo.d40992fa3b94872e2e0c.png" />
       <Card.Body>
         <Card.Title>Math worksheet generator</Card.Title>
         <Card.Text>
