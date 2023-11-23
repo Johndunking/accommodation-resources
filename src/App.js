@@ -12,6 +12,7 @@ import Chatgpt from './Components/gpt/Chatgpt';
 
 
 
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
       <Route path="science" element={<Science />} />
       <Route path="sel" element={<SEL />} />
       <Route path='teacher' element={<Chatgpt />} />
+      
+      
       
     </Routes>
     </>

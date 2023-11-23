@@ -1,138 +1,120 @@
-import React from 'react'
-import {useState, useEffect} from 'react'
-import Teacher from '../../assets/Teacher.png'
-
-import './gpt.css'
+import React, { useState, useEffect } from 'react';
+import './gpt.css';
 
 const Chatgpt = () => {
-  const [ value, setValue] = useState("")
-  const  [message, setMessage] = useState(null)
-  const [previousChats, setPreviousChats] = useState([])
-  const [currentTitle, setCurrentTitle] = useState([])
+  const API_URL = 'https://accommodation-resources-da4d836e1db9.herokuapp.com/completions';
 
-  const createNewChat = () => {
-    setMessage(null)
-    setValue("")
-    setCurrentTitle(null)
-  }
+  const [prompt, setPrompt] = useState('');
+  const [result, setResult] = useState('');
 
-  const handleClick = (uniqueTitle) => {
-    setCurrentTitle(uniqueTitle)
-    setMessage(null)
-    setValue("")
-  }
+  let controller = null;
 
-  
-
-  const getMessages = async () => {
-    const options = {
-      method: "POST",
-      body : JSON.stringify({
-        message: value
-      }),
-      headers: {
-        "Content-Type": "application/json"
-      }
+  const generate = async () => {
+    // Alert the user if no prompt value
+    if (!prompt) {
+      alert('Please enter a prompt.');
+      return;
     }
-  
+
+    setResult('Generating...');
+
+    // Create a new AbortController instance
+    controller = new AbortController();
+    const signal = controller.signal;
 
     try {
-      const response = await fetch('https://accommodation-resources-da4d836e1db9.herokuapp.com/completions',options)
-      const data = await response.json()
-      console.log("API Response:", data);
-      setMessage(data.choices[0].message);
-      setValue("")
-      
+      // Fetch the response from the OpenAI API with the signal from AbortController
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: prompt,
+          stream: true, // For streaming responses
+        }),
+        signal, // Pass the signal to the fetch request
+      });
 
-     
+      // Read the response as a stream of data
+      const reader = response.body.getReader();
 
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        // Handle the streaming data
+        const chunk = new TextDecoder('utf-8').decode(value);
+        setResult((prevResult) => prevResult + chunk);
+      }
     } catch (error) {
-      console.error(error)
+      console.error(error);
+    } finally {
+      // Enable the generate button and disable the stop button
+      controller = null; // Reset the AbortController instance
     }
-  }
+  };
 
-  console.log(message)
+  const stop = () => {
+    // Abort the fetch request by calling abort() on the AbortController instance
+    if (controller) {
+      controller.abort();
+      controller = null;
+    }
+  };
 
-  
+  const handlePromptChange = (e) => {
+    setPrompt(e.target.value);
+  };
 
-
-
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      generate();
+    }
+  };
 
   useEffect(() => {
-
-    if (!currentTitle && value && message) {
-      setCurrentTitle(value)
-    }
-    if (currentTitle && value && message){
-      setPreviousChats(prevChats => (
-        [...prevChats, {
-          title: currentTitle,
-          role: "Student",
-          content: value
-
-        }, {
-          title: currentTitle,
-          role: message.role,
-          content: message.content
-
-        }]
-      ))
-    }
-    
-
-  }, [message, currentTitle])
-
-  const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
-  const uniqueTitle = Array.from(new Set(previousChats.map(previousChats => previousChats.title)))
-
-  console.log(previousChats)
-
-
-
-
-
-
+    return () => {
+      stop();
+    };
+  }, []);
 
   return (
-    <div className='app'>
-        <section className='side-bar'>
-          <button className='button' onClick={createNewChat}>+ New Chat</button>
-          <ul className='history'>
-          {uniqueTitle?.map((uniqueTitle, index) =>
-            <li key={index} onClick={() => handleClick(uniqueTitle)}>
-              {uniqueTitle}
-            </li>)}
-          </ul>
-          <nav className='nav'>
-            <p>Made by the Mr. Duncan</p>
-          </nav>
-        </section>
-        <section className='main'>
-          {currentTitle && <h1 className='title'> <img src={Teacher} alt='Teacher' fluid className='center' style={{ width: '18rem', paddingTop: '100px'}}/></h1>}
-          <ul className='feed'>
-            {currentChat?.map((chatMessage, index) => <li key={index}>
-              <p className='role'>{chatMessage.role}</p>
-              <p>{chatMessage.content}</p>
-              </li>)}
-
-          </ul>
-          <div className='bottom-section'>
-            <div className='input-container'>
-              <input value={value} onChange={(e) => setValue(e.target.value)} 
-              onKeyUp={(e) => {if (e.key === "Enter") {e.preventDefault();  getMessages();}}}
-              placeholder="Ask me anything!"
-               />
-              <div id='submit'  type='submit' onClick={getMessages}>➢</div>
-              
-            </div>
-            <p className='info'>
-              Ask any questions and i will do my best to support you!
-            </p>
-
-          </div>
-        </section>
+    <div className="lg:w-1/2 2xl:w-1/3 p-8 rounded-md bg-gray-100">
+      <h1 className="text-3xl font-bold mb-6">Streaming OpenAI API Completions in React</h1>
+      <div className="mt-4 h-48 overflow-y-auto">
+        <p className="text-gray-500 text-sm mb-2">Generated Text</p>
+        <p id="resultText" className="whitespace-pre-line">
+          {result}
+        </p>
+      </div>
+      <input
+        type="text"
+        id="promptInput"
+        className="w-full px-4 py-2 rounded-md bg-gray-200 placeholder-gray-500 focus:outline-none mt-4"
+        placeholder="Enter prompt..."
+        value={prompt}
+        onChange={handlePromptChange}
+        onKeyPress={handleKeyPress}
+      />
+      <div className="flex justify-center mt-4">
+        <button
+          id="generateBtn"
+          className="w-1/2 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-900 focus:outline-none mr-2"
+          onClick={generate}
+        >
+          Generate
+        </button>
+        <button
+          id="stopBtn"
+          className="w-1/2 px-4 py-2 rounded-md border border-gray-500 text-gray-500 hover:text-gray-700 hover:border-gray-700 focus:outline-none ml-2 opacity-75 cursor-not-allowed"
+          onClick={stop}
+        >
+          Stop
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Chatgpt
+export default Chatgpt;
