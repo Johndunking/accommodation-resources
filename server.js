@@ -7,6 +7,11 @@ require('dotenv').config();
 
 const allowedOrigins = ['https://accommodation-resources.com'];
 
+app.get('/', (req, res) => {
+  res.send('Hello, this is your server :D!');
+});
+
+
 const corsOptions = {
   origin: (origin, callback) => {
     if (allowedOrigins.includes(origin) || !origin) {
