@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './gpt.css';
 
 const Chatgpt = () => {
-  const API_URL = 'https://accommodation-resources-da4d836e1db9.herokuapp.com/completions';
+  const API_URL = 'https://api.openai.com/v1/chat/completions';
 
   const [prompt, setPrompt] = useState('');
   const [result, setResult] = useState('');
