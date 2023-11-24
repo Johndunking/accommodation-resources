@@ -16,7 +16,7 @@ const Math = () => {
     <Container> 
         <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
-          <Image src={mathlogo} fluid className='center' style={{ width: '18rem',}}   />
+          <Image src={mathlogo} fluid className='center' style={{ width: '12rem',paddingBottom:'20px'}}   />
           <h1>Math <br/>Accommodations</h1>
           </Col>
         </Row>

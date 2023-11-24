@@ -15,7 +15,7 @@ const SEL = () => {
        <Container> 
         <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
-          <Image src={sellogo} fluid className='center' style={{ width: '18rem',}}   />
+          <Image src={sellogo} fluid className='center' style={{ width: '12rem',paddingBottom:'20px'}}   />
           <h1>SEL <br/>Accommodations</h1>
           </Col>
         </Row>

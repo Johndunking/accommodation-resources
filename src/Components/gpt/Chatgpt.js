@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useCallback } from 'react';
 import './gpt.css';
+import Teacher from '../../assets/Teacher.png'
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Chatgpt = () => {
   const API_URL = 'https://accommodation-resources-da4d836e1db9.herokuapp.com/completions';
 
   const [prompt, setPrompt] = useState('');
   const [result, setResult] = useState('');
-
-  let controller = null;
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [abortController, setAbortController] = useState(null);
 
   const generate = async () => {
-    // Alert the user if no prompt value
     if (!prompt) {
-      alert('Please enter a prompt.');
+      alert('Enter your question...');
       return;
     }
+    setResult('');
+    setPrompt('');
 
-    setResult('Generating...');
 
-    // Create a new AbortController instance
-    controller = new AbortController();
-    const signal = controller.signal;
+    setIsGenerating(true);
+
+    const controller = new AbortController();
+    setAbortController(controller);
 
     try {
-      // Fetch the response from the OpenAI API with the signal from AbortController
       const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
@@ -31,37 +34,33 @@ const Chatgpt = () => {
         },
         body: JSON.stringify({
           message: prompt,
-          stream: true, // For streaming responses
+          stream: true,
         }),
-        signal, // Pass the signal to the fetch request
+        signal: controller.signal,
       });
 
-      // Read the response as a stream of data
       const reader = response.body.getReader();
+      
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
+        setIsGenerating(false);
 
-        // Handle the streaming data
         const chunk = new TextDecoder('utf-8').decode(value);
         setResult((prevResult) => prevResult + chunk);
       }
     } catch (error) {
       console.error(error);
-    } finally {
-      // Enable the generate button and disable the stop button
-      controller = null; // Reset the AbortController instance
     }
   };
 
-  const stop = () => {
-    // Abort the fetch request by calling abort() on the AbortController instance
-    if (controller) {
-      controller.abort();
-      controller = null;
+  const stop = useCallback(() => {
+    console.log('Stop button clicked');
+    if (abortController) {
+      abortController.abort();
     }
-  };
+  }, [abortController]);
 
   const handlePromptChange = (e) => {
     setPrompt(e.target.value);
@@ -75,15 +74,20 @@ const Chatgpt = () => {
 
   useEffect(() => {
     return () => {
-      stop();
+      if (abortController) {
+        abortController.abort();
+      }
     };
-  }, []);
+  }, [abortController]);
+
 
   return (
+    <div className="flex-container">
     <div className="lg:w-1/2 2xl:w-1/3 p-8 rounded-md bg-gray-100">
-      <h1 className="text-3xl font-bold mb-6">Streaming OpenAI API Completions in React</h1>
+      <h1 className="text-3xl font-bold mb-6">TeachBot <br/> <img src={Teacher} alt='teacherlogo' style={{width:'8rem',paddingTop:'25px'}}/></h1>
       <div className="mt-4 h-48 overflow-y-auto">
-        <p className="text-gray-500 text-sm mb-2">Generated Text</p>
+        <p className="text-gray-500 text-sm mb-2"></p>
+        {isGenerating && <p className="text-gray-500 text-sm mb-2">Generating...</p>}
         <p id="resultText" className="whitespace-pre-line">
           {result}
         </p>
@@ -92,27 +96,28 @@ const Chatgpt = () => {
         type="text"
         id="promptInput"
         className="w-full px-4 py-2 rounded-md bg-gray-200 placeholder-gray-500 focus:outline-none mt-4"
-        placeholder="Enter prompt..."
+        placeholder="Enter your question..."
         value={prompt}
         onChange={handlePromptChange}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyPress}
       />
       <div className="flex justify-center mt-4">
-        <button
+        <Button
           id="generateBtn"
-          className="w-1/2 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-900 focus:outline-none mr-2"
+          className="w-1/2 px-4 py-2 rounded-md border border-gray-500 bg-dark text-white"
           onClick={generate}
         >
-          Generate
-        </button>
-        <button
+          Ask
+        </Button>
+        <Button
           id="stopBtn"
-          className="w-1/2 px-4 py-2 rounded-md border border-gray-500 text-gray-500 hover:text-gray-700 hover:border-gray-700 focus:outline-none ml-2 opacity-75 cursor-not-allowed"
+          className="w-1/2 px-4 py-2 rounded-md border border-dark bg-light text-dark"
           onClick={stop}
         >
           Stop
-        </button>
+        </Button>
       </div>
+    </div>
     </div>
   );
 };
