@@ -11,7 +11,7 @@ body{
 }
 .teach{
     color: white; /* Set the text color */
-    text-shadow: 2px 2px 4px lightcoral; 
+    text-shadow: 2px 2px 4px gray; 
 }
 .title {
     padding-top: 50px;
