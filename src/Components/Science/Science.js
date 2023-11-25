@@ -16,7 +16,7 @@ const Science = () => {
         <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
           <Image src={sciencelogo} fluid className='center' style={{ width: '12rem',paddingBottom:'20px'}}   />
-          <h1>Science <br/>Accommodations</h1>
+          <h1 className='teach'>Science <br/>Accommodations</h1>
           </Col>
         </Row>
         <Row className='cards'>

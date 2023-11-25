@@ -16,7 +16,7 @@ const Writing = () => {
         <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
           <Image src={writinglogo} fluid className='center' style={{ width: '10rem',marginLeft:'20px',paddingBottom:'20px'}}   />
-          <h1>Writing <br/>Accommodations</h1>
+          <h1 className='teach'>Writing <br/>Accommodations</h1>
           </Col>
         </Row>
         <Row className='cards'>

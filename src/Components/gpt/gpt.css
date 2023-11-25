@@ -9,6 +9,10 @@ body{
     margin-bottom: 0;
     bottom: 0;
 }
+.teach{
+    color: white; /* Set the text color */
+    text-shadow: 2px 2px 4px red; 
+}
 .title {
     padding-top: 50px;
 }
@@ -30,13 +34,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-.button {
-    border: solid 0.5px rgba (255, 255, 255, 0.5);
-    background-color: transparent;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-}
+
 
 .history {
     padding: 10px;
@@ -88,6 +86,7 @@ body{
 
 input {
     width: 100%;
+    width: 400px;
     border: none;
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -140,6 +139,18 @@ input:focus {
     justify-content: center;
     align-items: center;
     height: 100vh; /* This ensures the container takes the full height of the viewport */
+  }
+  /* gpt.css */
+
+.custom-results-box {
+    max-width: 400px; /* Adjust the width as needed */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    padding: 10px; /* Add padding for spacing inside the box */
+    background-color: transparent; /* Set a background color if needed */
+  }
+  
+  #generateBtn{
+    margin-left: 120px;
   }
 
  
