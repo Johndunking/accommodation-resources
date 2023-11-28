@@ -84,7 +84,7 @@ const Chatgpt = () => {
 
 
   return (
-    <div className="flex-container">
+    <div className="flex-container img-fluid">
     <div className="lg:w-1/2 2xl:w-1/3 p-8 rounded-md bg-gray-100">
       <h1 className="text-3xl font-bold mb-6 teach">TeachBot <br/> <img src={Teacher} alt='teacherlogo' style={{width:'8rem',paddingTop:'25px'}}/></h1>
       {generated && (<div className="mt-4 custom-results-box">
