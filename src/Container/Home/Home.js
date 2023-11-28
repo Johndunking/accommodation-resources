@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = () => {
   return (
     <>
-   <section className='home container-fluid'>
+   <section className='home img-fluid'>
    <div>
    <div>
    <Logo />

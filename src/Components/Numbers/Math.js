@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const Math = () => {
   return (
     <>
-    <div className='math'>
+    <div className='math img-fluid'>
     <Container> 
         <Row className='page'>
           <Col style={{  textAlign:'center', color:'black', fontFamily:'Helvettica' }}  className="row justify-content-center">
