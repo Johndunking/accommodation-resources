@@ -8,6 +8,7 @@ const Chatgpt = () => {
   const API_URL = 'https://accommodation-resources-da4d836e1db9.herokuapp.com/completions';
 
   const [prompt, setPrompt] = useState('');
+  const [generated, setGenerated] = useState(false);
   const [result, setResult] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [abortController, setAbortController] = useState(null);
@@ -22,6 +23,7 @@ const Chatgpt = () => {
 
 
     setIsGenerating(true);
+    setGenerated(true);
 
     const controller = new AbortController();
     setAbortController(controller);
@@ -85,17 +87,12 @@ const Chatgpt = () => {
     <div className="flex-container">
     <div className="lg:w-1/2 2xl:w-1/3 p-8 rounded-md bg-gray-100">
       <h1 className="text-3xl font-bold mb-6 teach">TeachBot <br/> <img src={Teacher} alt='teacherlogo' style={{width:'8rem',paddingTop:'25px'}}/></h1>
-      {generate && (<div className="mt-4 custom-results-box">
-        {isGenerating ? (
-          <p className="text-gray-500 text-sm mb-2">Generating...</p>
-        ) : (
-          <>
-            <p className="text-gray-500 text-sm mb-2"></p>
-            <p id="resultText" className="whitespace-pre-line">
-              {result}
-            </p>
-          </>
-        )}
+      {generated && (<div className="mt-4 custom-results-box">
+        <p className="text-gray-500 text-sm mb-2"></p>
+        {isGenerating && <p className="text-gray-500 text-sm mb-2">Generating...</p>}
+        <p id="resultText" className="whitespace-pre-line">
+          {result}
+        </p>
       </div>
       )}
       <input
