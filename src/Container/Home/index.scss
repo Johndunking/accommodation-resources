@@ -5,7 +5,10 @@
   min-height: 100vh; /* Set minimum height to 100% of viewport height */
   min-width: 100vw; /* Set minimum width to 100% of viewport width */
   overflow: hidden; /* Hiding both x and y overflow */
+  opacity: 0.5;
+
 }
+
 
 
   @media screen and (max-width: 1200px) {
@@ -18,7 +21,9 @@
       background-repeat: no-repeat;
       overflow: hidden; /* Hiding both x and y overflow */
     }
-  }
+   }
+    
+  
 
 
 

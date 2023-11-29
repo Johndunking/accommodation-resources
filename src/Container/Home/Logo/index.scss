@@ -39,14 +39,14 @@
     stroke-width: 10;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 720px) {
 
     .logo-container {
-        position: relative;
-        width: 300px;
+        position: absolute;
+        width: 250px;
         height: auto;
         top: 0px;
-        right: 0px;
+        right: 80px;
         box-sizing: border-box;
         margin: auto;
         left: auto;
@@ -54,7 +54,7 @@
     
       .logo-container svg {
         position: absolute;
-        top: 97px;
+        top: 122px;
         right: auto;
         bottom: auto;
         left: 0px;
@@ -63,3 +63,13 @@
       }
     
     }
+    @media screen and (max-height: 400px){
+        .logo-container{display: none;}
+
+    }
+    @media screen and (max-width: 350px){
+        .logo-container{display: none;}
+
+    }
+
+
