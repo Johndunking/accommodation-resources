@@ -8,6 +8,7 @@ import sellogo from '../../assets/sel.png'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import simform from '../../assets/simform.jpg'
 
 const SEL = () => {
   return (
@@ -31,6 +32,19 @@ const SEL = () => {
         </Card.Text>
         <Button variant="primary" href="https://www.magicschool.ai/"
         target="_blank">Magic School AI</Button>
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem',backgroundColor: '#343541', color:'white' }}>
+      <Card.Img variant="top" 
+      src={simform}
+       />
+      <Card.Body>
+        <Card.Title>SIM Form</Card.Title>
+        <Card.Text>
+          Tier 2 behavior intervention generating form to support student behaviors.
+        </Card.Text>
+        <Button variant="primary" href="https://simsform.netlify.app"
+        target="_blank">SIM</Button>
       </Card.Body>
     </Card>
         <Card style={{ width: '18rem',backgroundColor: '#343541', color:'white' }}>
