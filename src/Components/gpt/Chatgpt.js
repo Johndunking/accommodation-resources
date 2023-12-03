@@ -98,7 +98,7 @@ const Chatgpt = () => {
       <input
         type="text"
         id="promptInput"
-        className="w-full px-4 py-2 rounded-md bg-gray-200 placeholder-gray-500 focus:outline-none mt-4"
+        className="w-full px-4 py-2 rounded-md bg-gray-200 placeholder-gray-500 focus:outline-none mt-4 img-fluid"
         placeholder="Enter your question..."
         value={prompt}
         onChange={handlePromptChange}
