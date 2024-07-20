@@ -8,6 +8,7 @@ import mathlogo from '../../assets/Math.png'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Sitelogo from '../../assets/mathsitelogo.png'
 
 const Math = () => {
   return (
@@ -58,7 +59,7 @@ const Math = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem', backgroundColor: '#343541', color:'white'  }}>
-      <Card.Img variant="top" src="https://mathworksheetsgenerator.netlify.app/static/media/logo.d40992fa3b94872e2e0c.png" />
+      <Card.Img variant="top" src={Sitelogo} />
       <Card.Body>
         <Card.Title>Math worksheet generator</Card.Title>
         <Card.Text>
